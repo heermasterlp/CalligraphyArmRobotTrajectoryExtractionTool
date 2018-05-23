@@ -124,7 +124,7 @@ class CalligraphyArmRobotTrajectoryExtractionTool(QMainWindow, Ui_MainWindow):
 
         points = []
         for pt in self.main_scene.trajectory_points:
-            points.append((pt[0] * 0.1 / self.scale, pt[1] * 0.1 / self.scale, z0))
+            points.append((x0 + pt[0] * 0.1 / self.scale, y0 + pt[1] * 0.1 / self.scale, z0))
 
         if len(points) == 0:
             QMessageBox.information(self, "Points ", "Points are null!")
